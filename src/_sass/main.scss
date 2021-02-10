@@ -1,0 +1,186 @@
+@charset "utf-8";
+//@import "../../node_modules/bulma/css/bulma.min.css";
+//@import "../../node_modules/swiper/swiper-bundle.css";
+
+$link: #b67d25;
+//$navbar-item-hover-color : $link;
+
+@import "../../node_modules/bulma/bulma";
+//@import "../../node_modules/swiper/swiper";
+
+$maxWidth: 1408;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+header {
+  font-weight: $weight-semibold;
+  text-align: center;
+  padding: 1rem;
+
+  .header-title {
+    color: $link;
+    @include adaptiv-font(18, 14);
+  }
+
+  .header-wrap {
+    flex: 0 0 auto;
+  }
+
+  .header-logo img {
+    min-width: 5rem;
+    width: 8rem;
+  }
+
+  .icon {
+    height: 3.5em;
+    width: 3.5em;
+
+    .svg-inline--fa {
+      height: 2em;
+      width: 2em !important;
+    }
+  }
+
+  .navbar-brand {
+    background-color: $grey-lightest;
+  }
+
+  .navbar-dropdown a.navbar-item {
+    padding-right: 1rem;
+  }
+
+  @include until($desktop) {
+    .navbar-link:not(.is-arrowless) {
+      padding-right: 0.75rem;
+    }
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 50vh;
+
+  .slide-title {
+    @include adaptiv-font(34, 20);
+    font-weight: $weight-semibold;
+  }
+
+  .slide-desc {
+    @include adaptiv-font(18, 14);
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    color: $link;
+  }
+  .swiper-pagination-bullet {
+    width: .7rem;
+    height: .7rem;
+    background: $grey-lightest;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    color: $white;
+    background: #000000ab;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.last-newes{
+  background: $grey-lightest;
+
+  .title {
+    color: hsl(192, 17%, 99%) !important;
+  }
+
+  .subtitle {
+    color: hsl(192, 17%, 99%) !important;
+    padding-top: 2rem;
+    line-height: 1.5;
+  }
+}
+
+.features {
+  padding: 5rem 0;
+}
+
+.box.cta {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
+.card-content .content {
+  font-size: 14px;
+  margin: 1rem 1rem;
+
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.card {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  margin-bottom: 2rem;
+}
+
+.intro {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.sandbox {
+  padding: 5rem 0;
+}
+
+.tile.notification {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.is-shady {
+  animation: flyintoright .4s backwards;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19);
+  }
+}
+
+/*adds font awesome stars*/
+
+footer {
+  .footer-contacts {
+    @include adaptiv-font(16, 14);
+    font-weight: $weight-medium;
+    //text-align: center;
+  }
+}

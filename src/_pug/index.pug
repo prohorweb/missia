@@ -1,0 +1,285 @@
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Миссионерский отдел Санкт-Петербургской епархии
+    link(rel='shortcut icon' href='../images/fav_icon.png' type='image/x-icon')
+    //link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
+    link(rel='stylesheet' type='text/css' href='https://unpkg.com/swiper/swiper-bundle.min.css')
+    link(rel='stylesheet' type='text/css' href='css/main.css')
+    script(type='module').
+        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+        const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        // If we need pagination
+        pagination: {
+        el: '.swiper-pagination',
+        },
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        // And if we need scrollbar
+        scrollbar: {
+        el: '.swiper-scrollbar',
+        },
+        });
+
+    //link(rel='stylesheet' href='https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css')
+doctype html
+body
+header
+    section.container
+        .columns.is-vcentered.is-centered.is-hidden-touch
+            .column.is-3-widescreen
+                .header-title
+                    | Миссионерский отдел </br> Санкт-Петербургской епархии
+            .column.header-wrap
+                a.header-logo(href='../')
+                    img(src='https://static.tildacdn.com/tild3038-3665-4131-a530-376435653564/Logo_fish9b_2.jpg' alt='Logo')
+            .column.is-3-widescreen
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-facebook
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-vk
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-youtube
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-instagram
+        nav.navbar(role='navigation' aria-label='main navigation')
+            .navbar-brand
+                .navbar-item.header-title.is-hidden-desktop
+                    | Миссионерский отдел
+                a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+            #navbarBasicExample.navbar-menu.is-justify-content-center
+                a.navbar-item
+                    | НОВОСТИ
+                .navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link
+                        | ДОКУМЕНТЫ
+                    .navbar-dropdown
+                        a.navbar-item(href="#") Материалы IV Всецерковного съезда епархиальных миссионеров
+                        a.navbar-item(href="#") Материалы конференций
+                        a.navbar-item(href="#") Миссионерский отдел
+                        a.navbar-item(href="#") Рабочие материалы
+                        a.navbar-item(href="#") РАЦИРС
+                        a.navbar-item(href="#") Юридические документы
+                a.navbar-item(href="#") ВИДЕОБЛОГ
+                .navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link
+                        | СОЦ. МИССИЯ
+                    .navbar-dropdown
+                        a.navbar-item(href="#") За Жизнь
+                        a.navbar-item(href="#") Детская Миссия
+                        a.navbar-item(href="#") Консультация
+                a.navbar-item(href="#") О СЕКТАХ
+                .navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link
+                        | ОБРАЗОВАНИЕ
+                    .navbar-dropdown
+                        a.navbar-item(href="#") Женские Курсы
+                        a.navbar-item(href="#") Детская Курсы
+                a.navbar-item(href="#") КОНТАКТЫ
+//Carousel
+section.carousel
+    .swiper-container
+        .swiper-wrapper
+            .swiper-slide(style='background-image: url("https://static.tildacdn.com/tild3963-3039-4362-b436-323236623661/st-petersburg-371024.jpg");' src='')
+                .slide-content
+                    .slide-title Миссионерский отдел Санкт-Петербургской епархии
+                    .slide-desc Московский патриархат
+
+            .swiper-slide(style='background-image: url("https://thumb.tildacdn.com/tild3936-3161-4730-a334-323733353432/-/format/webp/bibleiskie_istorii2.jpg");' src='')
+                .slide-content
+                    .slide-title Антисектантское направление
+                    .slide-desc Помощь попавшим в секту и их близких, необходимая информация
+
+            .swiper-slide(style='background-image: url("https://static.tildacdn.com/tild3065-3133-4838-b432-383137623233/Pervoe-zanyatie-v-no.jpg");' src='')
+                .slide-content
+                    .slide-title Ассоциация молодежных общин
+                    .slide-desc Взаимодействие миссионеров Санкт-Петербурга для проведения общих мероприятий
+
+            .swiper-slide(style='background-image: url("https://static.tildacdn.com/tild6265-3634-4037-b630-663733353032/IMG_8645.jpg");' src='')
+                .slide-content
+                    .slide-title Конференции и семинары
+                    .slide-desc Съезды миссионеров, конференции, семинары, миссионерские молебны
+
+            .swiper-slide(style='background-image: url("https://static.tildacdn.com/tild3935-3831-4365-b163-623161613434/IMG_3184.jpg");' src='')
+                .slide-content
+                    .slide-title Социальное направление
+                    .slide-desc Помощь нуждающимся, бездомным
+        .swiper-button-next.is-hidden-touch
+        .swiper-button-prev.is-hidden-touch
+        .swiper-pagination.is-hidden-touch
+//News
+section.last-newes
+    .container
+        .columns.features
+            .column.is-4
+                .card.is-shady
+                    .card-image.has-text-centered
+                        iframe(width='100%' height='250' src='https://www.youtube.com/embed/3AnEbezS-YI' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                    .card-content
+                        .content
+                            h4 Полемика с атеизмом
+                            p
+                                | Состоялась беседа на телеканале Спас о вере и неверии, а так же наскольком возможно быть христианином в современном обществе.
+                            p
+                                a(href='#') Подробнее...
+
+            .column.is-4
+                .card.is-shady
+                    .card-image.has-text-centered
+                        iframe(width='100%' height='250' src='https://www.youtube.com/embed/-IrnGouodhc' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                    .card-content
+                        .content
+                            h4 Уличная миссия
+                            p
+                                | Описание того, как прошла уличная миссия. О чем были беседы и какие сделали выводы.
+                            p
+                                a(href='#') Подробнее...
+
+            .column.is-4
+                .card.is-shady
+                    .card-image.has-text-centered
+                        iframe(width='100%' height='250' src='https://www.youtube.com/embed/QAEY2SveAPw' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                    .card-content
+                        .content
+                            h4 Техническое православие
+                            p
+                                | Состоялась беседа на телеканале Спас о современных технологиях. Какое место они занимают в жизни христианина. В чем помогают или мешают.
+                            p
+                                a(href='#') Подробнее...
+
+
+        //.sandbox
+        //    .tile.is-ancestor
+        //        .tile.is-parent.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                p.title Hello World
+        //                p.subtitle What is up?
+        //        .tile.is-parent.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                p.title Foo
+        //                p.subtitle Bar
+        //        .tile.is-parent.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                p.title Third column
+        //                p.subtitle With some content
+        //                .content
+        //                    p
+        //                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+        //    .tile.is-ancestor
+        //        .tile.is-vertical.is-8
+        //            .tile
+        //                .tile.is-parent.is-vertical
+        //                    article.tile.is-child.notification.is-white
+        //                        p.title Vertical tiles
+        //                        p.subtitle Top box
+        //                    article.tile.is-child.notification.is-white
+        //                        p.title Vertical tiles
+        //                        p.subtitle Bottom box
+        //                .tile.is-parent
+        //                    article.tile.is-child.notification.is-white
+        //                        p.title Middle box
+        //                        p.subtitle With an image
+        //                        figure.image.is-4by3
+        //                            img(src='https://picsum.photos/640/480/?random' alt='Description')
+        //            .tile.is-parent.is-shady
+        //                article.tile.is-child.notification.is-white
+        //                    p.title Wide column
+        //                    p.subtitle Aligned with the right column
+        //                    .content
+        //                        p
+        //                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+        //        .tile.is-parent.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                .content
+        //                    p.title Tall column
+        //                    p.subtitle With even more content
+        //                    .content
+        //                        p
+        //                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula
+        //                            | eleifend, nunc dui porta orci, quis semper odio felis ut quam.
+        //                        p
+        //                            | Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet
+        //                            | felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.
+        //                        p
+        //                            | Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam
+        //                            | ut aliquet lacus, quis faucibus libero. Quisque non semper leo.
+        //    .tile.is-ancestor
+        //        .tile.is-parent.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                p.title Side column
+        //                p.subtitle With some content
+        //                .content
+        //                    p
+        //                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+        //        .tile.is-parent.is-8.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                p.title Main column
+        //                p.subtitle With some content
+        //                .content
+        //                    p
+        //                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+        //    .tile.is-ancestor
+        //        .tile.is-parent.is-8.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                p.title Murphy&apos;s law
+        //                p.subtitle Anything that can go wrong will go wrong
+        //                .content
+        //                    p
+        //                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+        //        .tile.is-parent.is-shady
+        //            article.tile.is-child.notification.is-white
+        //                p.title Main column
+        //                p.subtitle With some content
+        //                .content
+        //                    p
+        //                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+//footer.footer
+//    .container
+//        .columns.contacts.is-centered.is-desktop
+//            .column.is-half.is-flex.is-justify-content-space-between
+//                 a(href='tel:8-812-710-36-27' title='Click to Call') 8 (812) 710-36-27
+//                 a(href='tel:+7-911-019-40-20' title='Click to Call') +7 (911) 019-40-20
+//                 a(href='official@missia-spb.ru' title='Click to Sent mail') official@missia-spb.ru
+footer.footer.p-0
+    .footer-contacts
+        .columns
+            .column.p-0
+                iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A3a9bb286369d26aec1f802f2469d699d88be2e7dc44372a01cdc8c1492b5e7c9&source=constructor' width='100%' height='400' frameborder='0')
+            .column.pl-5.pt-5
+                .p Миссионерский отдел работает ежедневно с 9:00 до 18:00 кроме выходных.
+                .p Приемные день: четверг с 14 до 21.
+                .p.mt-5 Консультации по договоренности
+                .p
+                    a(href='tel:8-812-710-36-27' title='Click to Call') 8 (812) 710-36-27
+                    .br
+                    a(href='official@missia-spb.ru' title='Click to Sent mail') official@missia-spb.ru
+                .p.mt-5 Пердседатель Отдела о.Николай Святченко
+                    .p
+                        a(href='official@missia-spb.ru' title='Click to Sent mail') official@missia-spb.ru
+                .p.mt-5 Секретарь Отдела
+                    .p
+                .p
+                    a(href='tel:+7-911-019-40-20' title='Click to Call') +7 (911) 019-40-20
+
+        //.columns.is-centered
+        //    .column.is-one-quarter
+        //        a(href='tel:8-812-710-36-27' title='Click to Call') 8 (812) 710-36-27
+        //    .column.is-one-quarter
+        //        a(href='tel:+7-911-019-40-20' title='Click to Call') +7 (911) 019-40-20
+        //    .column.is-one-quarter
+        //        a(href='official@missia-spb.ru' title='Click to Sent mail') official@missia-spb.ru
+script(src='js/main.js')
+script(src='js/svg.js')
+//script(src='https://unpkg.com/swiper/swiper-bundle.min.js')
+

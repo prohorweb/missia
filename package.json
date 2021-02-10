@@ -1,0 +1,46 @@
+{
+  "name": "bulma-start",
+  "version": "0.0.4",
+  "description": "Start package for Bulma",
+  "keywords": [
+    "sass",
+    "bulma",
+    "css",
+    "start"
+  ],
+  "author": "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgthms/bulma-start.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015-ie": "^6.7.0",
+    "bulma": "^0.9.2",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.2"
+  },
+  "scripts": {
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-build": "node-sass src/_sass/ -o public/css/ ",
+    "css-postcss": "postcss --use autoprefixer --output public/css/main.css public/css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "deploy": "npm run css-deploy && npm run js-build && npm run pug-build",
+    "js-build": "babel src/_javascript --out-dir public/js",
+    "js-watch": "npm run js-build -- --watch",
+    "pug-build": "pug -w -o  public/ src/_pug/",
+    "pug-watch": "pug -P -w -o  public/ src/_pug/",
+    "browser-sync-watch": "browser-sync start --server 'public' --files 'public'\n ",
+    "start": "npm-run-all --parallel css-watch js-watch pug-watch browser-sync-watch"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "bulma-extensions": "^6.2.7",
+    "pug": "^3.0.0",
+    "swiper": "^6.4.11"
+  }
+}

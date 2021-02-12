@@ -1,18 +1,33 @@
 @charset "utf-8";
-//@import "../../node_modules/bulma/css/bulma.min.css";
-//@import "../../node_modules/swiper/swiper-bundle.css";
 
-$link: #b67d25;
-//$navbar-item-hover-color : $link;
+$link: #ff9a02;
+$dark-blade: #00000080;
+
 
 @import "../../node_modules/bulma/bulma";
-//@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/components/navigation/navigation";
+@import "../../node_modules/swiper/components/pagination/pagination";
+
 
 $maxWidth: 1408;
 @mixin adaptiv-font($pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
   $maxWidth: $maxWidth - 320;
   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin is-centered() {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 html, body {
@@ -65,48 +80,55 @@ header {
 
 .swiper-container {
   width: 100%;
-  height: 50vh;
+  height: 70vh;
 
-  .slide-title {
-    @include adaptiv-font(34, 20);
-    font-weight: $weight-semibold;
-  }
+  .swiper-slide {
+    text-align: center;
+    color: $white;
+    background: $dark-blade center;
+    background-size: cover;
+    background-blend-mode: darken;
+    @include is-centered();
 
-  .slide-desc {
-    @include adaptiv-font(18, 14);
+    video {
+      margin-left: calc((100vw - (100vh * 1.7)) / 2);
+      margin-right: calc((100vw - (100vh * 1.7)) / 2);
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+    }
+
+    .video-bg {
+      background: $dark-blade;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      @include is-centered();
+    }
+
+    .slide-title {
+      @include adaptiv-font(34, 18);
+      font-weight: $weight-semibold;
+    }
+
+    .slide-desc {
+      @include adaptiv-font(18, 12);
+    }
   }
 
   .swiper-button-next, .swiper-button-prev {
     color: $link;
   }
+
   .swiper-pagination-bullet {
     width: .7rem;
     height: .7rem;
     background: $grey-lightest;
   }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    color: $white;
-    background: #000000ab;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: darken;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
-.last-newes{
+
+.last-newes {
   background: $grey-lightest;
 
   .title {

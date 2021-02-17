@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$link: #ff9a02;
+$link: #e28c08;
 $dark-blade: #00000080;
 
 
@@ -41,7 +41,10 @@ header {
 
   .header-title {
     color: $link;
-    @include adaptiv-font(18, 14);
+    @include adaptiv-font(20, 14);
+    p {
+      @include adaptiv-font(14, 12);
+    }
   }
 
   .header-wrap {
@@ -127,6 +130,12 @@ header {
   }
 }
 
+
+@include until($desktop) {
+  .section {
+    padding: 1rem;
+  }
+}
 
 .last-newes {
   background: $grey-lightest;

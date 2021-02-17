@@ -1,0 +1,35 @@
+//Carousel
+section.carousel
+    .swiper-container
+        .swiper-wrapper
+            .swiper-slide
+                //video(src='media/bg-home.mp4' autoplay='autoplay' loop='loop' muted='mute')
+                video(poster='media/bg-video.jpg' preload='none' autoplay loop muted)
+                    source(src='media/bg-home.mp4' type='video/mp4')
+                .video-bg
+                    .slide-content
+                        .slide-title Миссионерский отдел Санкт-Петербургской епархии
+                        .slide-desc Московский патриархат
+
+            .swiper-slide(style='background-image: url(media/1.jpeg);')
+                .slide-content
+                    .slide-title Антисектантское направление
+                    .slide-desc Помощь попавшим в секту и их близких, необходимая информация
+
+            .swiper-slide(style='background-image: url(media/2.jpeg);')
+                .slide-content
+                    .slide-title Ассоциация молодежных общин
+                    .slide-desc Взаимодействие миссионеров Санкт-Петербурга для проведения общих мероприятий
+
+            .swiper-slide(style='background-image: url(media/3.jpeg);')
+                .slide-content
+                    .slide-title Конференции и семинары
+                    .slide-desc Съезды миссионеров, конференции, семинары, миссионерские молебны
+
+            .swiper-slide(style='background-image: url(media/4.jpeg);')
+                .slide-content
+                    .slide-title Социальное направление
+                    .slide-desc Помощь нуждающимся, бездомным
+        .swiper-button-next.is-hidden-touch
+        .swiper-button-prev.is-hidden-touch
+        .swiper-pagination.is-hidden-touch

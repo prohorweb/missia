@@ -1,0 +1,69 @@
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Миссионерский отдел Санкт-Петербургской епархии
+    //link(rel='shortcut icon' href='../images/fav_icon.png' type='image/x-icon')
+    //link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    //link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
+    link(rel='stylesheet' type='text/css' href='css/main.css')
+    //script(type='module' src='bundle/app.mjs')
+
+    //link(rel='stylesheet' href='https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css')
+doctype html
+body
+header
+    section.container
+        .columns.is-vcentered.is-centered.is-hidden-touch
+            .column.is-3-widescreen
+                .header-title Миссионерский отдел
+                    p Санкт-Петербургской епархии
+            .column.header-wrap
+                a.header-logo(href='../')
+                    img(src='https://static.tildacdn.com/tild3038-3665-4131-a530-376435653564/Logo_fish9b_2.jpg' alt='Logo')
+            .column.is-3-widescreen
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-facebook
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-vk
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-youtube
+                a(href='https://vk.com/spbmissia').icon
+                    i.fab.fa-instagram
+        nav.navbar(role='navigation' aria-label='main navigation')
+            .navbar-brand
+                .navbar-item.header-title.is-hidden-desktop
+                    | Миссионерский отдел
+                a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+            #navbarBasicExample.navbar-menu.is-justify-content-center
+                a.navbar-item
+                    | НОВОСТИ
+                .navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link
+                        | ДОКУМЕНТЫ
+                    .navbar-dropdown
+                        a.navbar-item(href="#") Материалы IV Всецерковного съезда епархиальных миссионеров
+                        a.navbar-item(href="#") Материалы конференций
+                        a.navbar-item(href="#") Миссионерский отдел
+                        a.navbar-item(href="#") Рабочие материалы
+                        a.navbar-item(href="#") РАЦИРС
+                        a.navbar-item(href="#") Юридические документы
+                a.navbar-item(href="#") ВИДЕОБЛОГ
+                .navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link
+                        | СОЦ. МИССИЯ
+                    .navbar-dropdown
+                        a.navbar-item(href="#") За Жизнь
+                        a.navbar-item(href="#") Детская Миссия
+                        a.navbar-item(href="#") Консультация
+                a.navbar-item(href="#") О СЕКТАХ
+                .navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link
+                        | ОБРАЗОВАНИЕ
+                    .navbar-dropdown
+                        a.navbar-item(href="#") Женские Курсы
+                        a.navbar-item(href="#") Детская Курсы
+                a.navbar-item(href="#") КОНТАКТЫ

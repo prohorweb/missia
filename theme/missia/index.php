@@ -4,6 +4,10 @@ if (is_front_page()) {
     get_template_part('layout/section/carousel');
     get_template_part('layout/section/news');
 }
+
+if (is_category()) {
+    get_template_part('tpl/category');
+}
 //
 //if (cat_is_ancestor_of(9, $cat)  or is_category(9)) {
 //    get_template_part('category/articles');

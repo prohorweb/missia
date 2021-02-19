@@ -14,3 +14,4 @@ _gh_pages
 _site
 node_modules
 /src/_pug/index.html
+/public/
